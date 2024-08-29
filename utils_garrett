@@ -1,15 +1,59 @@
-''' ITERATION 2
+''' ITERATION 3
 
 Module: Beaver Analytics - Making Data Fun!
 
 This module provides a simple, reusable foundation for my analytics projects. 
+
+
 '''
 
 #####################################
-# Declare a global variable named byline.
+# Declare global variables
 #####################################
 
-byline: str = 'Beaver Analytics: Making Data Fun!'
+#Boolean variable to indicate if the company has international clients
+has_international_clients: bool = True
+
+#Integer variable for the number of years in operation
+years_in_operation: int = 10
+
+#list of strings representing the skills offered by the company
+skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
+
+#List of floats representing individual client statisfaction scores
+client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+
+#Additional boolean variable - comapny offers satisfaction guarantee
+satisfaction_guarantee: bool = True
+
+#Additional integer - total number of clients served in company history
+clients_served: int = 400
+
+#Addition list of strings - list of core company values
+core_company_values: list = ["Integrity", "Dependability", "Trustworthy"]
+
+#Additional list of floats - leadtimes of last projects completed in days
+project_leadtime: list = [10, 20, 15, 15, 18]
+
+####################################
+#Declare a global variable named byine
+#Make it a multiline f-string 
+####################################
+
+byline: str = f"""
+------------------------------------
+'Beaver Analytics: Making Data Fun!'
+------------------------------------
+Has International Clients: {has_international_clients}
+Years in Operation:        {years_in_operation}
+Skills Offered:            {skills_offered}
+Client Satisfaction Scores:{client_satisfaction_scores}
+Satisfaction Guarantee:    {satisfaction_guarantee}
+Number of CLients Served:  {clients_served}
+Company Core Values:       {core_company_values}
+Project Lead Times:        {project_leadtime}
+
+"""
 
 #####################################
 #Define the get_byline() function
