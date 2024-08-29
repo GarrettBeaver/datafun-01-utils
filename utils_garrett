@@ -1,10 +1,9 @@
-''' ITERATION 4
+''' ITERATION 5
 
 Module: Beaver Analytics - Making Data Fun!
 
-This module provides a simple, reusable foundation for my analytics projects. 
-
-
+This module displays the byline of an analytics company.  Features of the company are listed, 
+then the min, max, mean, and standard deviation are calculated and displayed in the byline. 
 '''
 
 #####################################
@@ -55,8 +54,6 @@ mean_leadtime: float = statistics.mean(project_leadtimes)
 stdev_leadtime: float = statistics.stdev(project_leadtimes)
 
 
-
-
 ####################################
 #Declare a global variable named byine
 #Make it a multiline f-string 
@@ -66,15 +63,23 @@ byline: str = f"""
 ------------------------------------
 'Beaver Analytics: Making Data Fun!'
 ------------------------------------
-Has International Clients: {has_international_clients}
-Years in Operation:        {years_in_operation}
-Skills Offered:            {skills_offered}
-Client Satisfaction Scores:{client_satisfaction_scores}
-Satisfaction Guarantee:    {satisfaction_guarantee}
-Number of CLients Served:  {clients_served}
-Company Core Values:       {core_company_values}
-Project Lead Times(days):  {project_leadtimes}
+Has International Clients:  {has_international_clients}
+Years in Operation:         {years_in_operation}
+Skills Offered:             {skills_offered}
+Client Satisfaction Scores: {client_satisfaction_scores}
+Minimum Satisfaction Score: {min_score}
+Maximum Satisfaction Score: {max_score}
+Mean Sattisfaction Score:   {mean_score:.2f}
+Standard Deviation of Satisfaction Scores: {stdev_score:.2f}
 
+Satisfaction Guarantee:     {satisfaction_guarantee}
+Number of CLients Served:   {clients_served}
+Company Core Values:        {core_company_values}
+Project Lead Times(days):   {project_leadtimes}
+Minimum Lead Time: {min_leadtime}
+Maximum Lead Time: {max_leadtime}
+Mean Lead Time:   {mean_leadtime:.2f}
+Standard Deviation of Lead Time: {stdev_leadtime:.2f}
 """
 
 #####################################
