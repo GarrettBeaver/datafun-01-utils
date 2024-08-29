@@ -1,4 +1,4 @@
-''' ITERATION 3
+''' ITERATION 4
 
 Module: Beaver Analytics - Making Data Fun!
 
@@ -6,6 +6,12 @@ This module provides a simple, reusable foundation for my analytics projects.
 
 
 '''
+
+#####################################
+# Import modules
+#####################################
+import statistics
+
 
 #####################################
 # Declare global variables
@@ -33,7 +39,23 @@ clients_served: int = 400
 core_company_values: list = ["Integrity", "Dependability", "Trustworthy"]
 
 #Additional list of floats - leadtimes of last projects completed in days
-project_leadtime: list = [10, 20, 15, 15, 18]
+project_leadtimes: list = [10, 20, 15, 15, 18]
+
+#####################################
+# Calculate Basic Statistics
+#####################################
+min_score: float = min(client_satisfaction_scores)
+max_score: float = max(client_satisfaction_scores)
+mean_score: float = statistics.mean(client_satisfaction_scores)
+stdev_score: float = statistics.stdev(client_satisfaction_scores)
+
+min_leadtime: float = min(project_leadtimes)
+max_leadtime: float = max(project_leadtimes)
+mean_leadtime: float = statistics.mean(project_leadtimes)
+stdev_leadtime: float = statistics.stdev(project_leadtimes)
+
+
+
 
 ####################################
 #Declare a global variable named byine
@@ -51,7 +73,7 @@ Client Satisfaction Scores:{client_satisfaction_scores}
 Satisfaction Guarantee:    {satisfaction_guarantee}
 Number of CLients Served:  {clients_served}
 Company Core Values:       {core_company_values}
-Project Lead Times:        {project_leadtime}
+Project Lead Times(days):  {project_leadtimes}
 
 """
 
